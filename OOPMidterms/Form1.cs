@@ -1,5 +1,6 @@
 ﻿using OOPMidterms.Properties;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,108 +9,63 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Serialization;
+
+
 
 namespace OOPMidterms
 {
     public partial class Form1 : Form
-    {
-        Form2 fm = new Form2();
-        private bool isCollapsed = true;
+    {   
 
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
+            
 
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
+            
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void submitbtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            fm.ShowDialog();
-        }
+            Hashtable table = new Hashtable();
+            
+            Student student = new Student(nametb.Text, stdnumbertb.Text, coursetb.Text, agetb.Text, gendertb.Text);
+            table.Add(student.stdnumber, student);
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            timer1.Start();
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timer1_Tick_1(object sender, EventArgs e)
-        {
-            if (isCollapsed)
+            
+            foreach (DictionaryEntry entry in table)
             {
-                flowLayoutPanel2.Height += 10;
-                dropDownButton.Image = Resources.uArrow;
-                if (flowLayoutPanel2.Size == flowLayoutPanel2.MaximumSize)
-                {
-                    timer1.Stop();
-                    isCollapsed = false;
-                }
-            }
-
-            else
-            {
-                flowLayoutPanel2.Height -= 10;
-                dropDownButton.Image = Resources.dArrow;
-                if (flowLayoutPanel2.Size == flowLayoutPanel2.MinimumSize)
-                {
-                    timer1.Stop();
-                    isCollapsed = true;
-                }
+                Student stud = (Student)entry.Value;
+                // Console.WriteLine("Student Id: {0}, Name: {1}, GPA: {2}", stud.Id, stud.Name, stud.GPA);
+                Console.WriteLine("Student Name: {0}, Age: {1}, Student Number: {2}", stud.name, stud.age, stud.stdnumber);
             }
         }
+        // ang problem lang di sya nag pepersist... pag inexit yung program di na nya alam kung ano yung prevous data
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-            timer1.Start();
+        // Class constructor 
+        class Student {
+            public string name { get; set; }
+            public string stdnumber { get; set; }
+            public string course{ get; set; }
+            public string age{ get; set; }
+            public string gender { get; set; }
+            public Student(string name, string stdnumber, string course, string age, string gender) { 
+                this.name = name;
+                this.stdnumber = stdnumber;
+                this.course = course;
+                this.age = age;
+                this.gender = gender;
+            }
         }
+        
+        // Functions for Ease of Access
 
-        private void flowLayoutPanel2_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
-        private void student1_Click(object sender, EventArgs e)
-        {
-            dropDownButton.Text = "Student 1";
-        }
-
-        private void student2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void student3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void student4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void student5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }
