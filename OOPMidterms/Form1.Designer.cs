@@ -41,11 +41,16 @@
             this.student5 = new System.Windows.Forms.Button();
             this.dropDownButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.nameInput = new System.Windows.Forms.TextBox();
+            this.studentNumberInput = new System.Windows.Forms.TextBox();
+            this.courseInput = new System.Windows.Forms.TextBox();
+            this.ageInput = new System.Windows.Forms.TextBox();
+            this.genderInput = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +70,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(325, 594);
+            this.button1.Location = new System.Drawing.Point(326, 595);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(323, 34);
             this.button1.TabIndex = 2;
@@ -179,7 +184,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Calibri", 10F);
-            this.button2.Location = new System.Drawing.Point(325, 554);
+            this.button2.Location = new System.Drawing.Point(326, 555);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(323, 34);
             this.button2.TabIndex = 11;
@@ -187,45 +192,96 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
-            // textBox1
+            // nameInput
             // 
-            this.textBox1.Font = new System.Drawing.Font("Calibri", 12F);
-            this.textBox1.Location = new System.Drawing.Point(343, 251);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(291, 32);
-            this.textBox1.TabIndex = 12;
+            this.nameInput.Font = new System.Drawing.Font("Calibri", 12F);
+            this.nameInput.Location = new System.Drawing.Point(343, 251);
+            this.nameInput.Name = "nameInput";
+            this.nameInput.Size = new System.Drawing.Size(291, 32);
+            this.nameInput.TabIndex = 12;
             // 
-            // textBox2
+            // studentNumberInput
             // 
-            this.textBox2.Font = new System.Drawing.Font("Calibri", 12F);
-            this.textBox2.Location = new System.Drawing.Point(343, 316);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(291, 32);
-            this.textBox2.TabIndex = 13;
+            this.studentNumberInput.Font = new System.Drawing.Font("Calibri", 12F);
+            this.studentNumberInput.Location = new System.Drawing.Point(343, 316);
+            this.studentNumberInput.Name = "studentNumberInput";
+            this.studentNumberInput.Size = new System.Drawing.Size(291, 32);
+            this.studentNumberInput.TabIndex = 13;
             // 
-            // textBox3
+            // courseInput
             // 
-            this.textBox3.Font = new System.Drawing.Font("Calibri", 12F);
-            this.textBox3.Location = new System.Drawing.Point(343, 377);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(291, 32);
-            this.textBox3.TabIndex = 14;
+            this.courseInput.Font = new System.Drawing.Font("Calibri", 12F);
+            this.courseInput.Location = new System.Drawing.Point(343, 377);
+            this.courseInput.Name = "courseInput";
+            this.courseInput.Size = new System.Drawing.Size(291, 32);
+            this.courseInput.TabIndex = 14;
             // 
-            // textBox4
+            // ageInput
             // 
-            this.textBox4.Font = new System.Drawing.Font("Calibri", 12F);
-            this.textBox4.Location = new System.Drawing.Point(343, 443);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(148, 32);
-            this.textBox4.TabIndex = 15;
+            this.ageInput.Font = new System.Drawing.Font("Calibri", 12F);
+            this.ageInput.Location = new System.Drawing.Point(343, 443);
+            this.ageInput.Name = "ageInput";
+            this.ageInput.Size = new System.Drawing.Size(148, 32);
+            this.ageInput.TabIndex = 15;
             // 
-            // textBox5
+            // genderInput
             // 
-            this.textBox5.Font = new System.Drawing.Font("Calibri", 12F);
-            this.textBox5.Location = new System.Drawing.Point(498, 443);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(136, 32);
-            this.textBox5.TabIndex = 16;
+            this.genderInput.Font = new System.Drawing.Font("Calibri", 12F);
+            this.genderInput.Location = new System.Drawing.Point(498, 443);
+            this.genderInput.Name = "genderInput";
+            this.genderInput.Size = new System.Drawing.Size(136, 32);
+            this.genderInput.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label1.Location = new System.Drawing.Point(466, 232);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 16);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "Name";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label3.Location = new System.Drawing.Point(452, 298);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 16);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Student No.";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label4.Location = new System.Drawing.Point(464, 358);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 16);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Course";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label5.Location = new System.Drawing.Point(343, 424);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(32, 16);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Age";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label6.Location = new System.Drawing.Point(500, 424);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(52, 16);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Gender";
             // 
             // Form1
             // 
@@ -234,11 +290,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(997, 726);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.genderInput);
+            this.Controls.Add(this.ageInput);
+            this.Controls.Add(this.courseInput);
+            this.Controls.Add(this.studentNumberInput);
+            this.Controls.Add(this.nameInput);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.flowLayoutPanel2);
             this.Controls.Add(this.button1);
@@ -267,11 +328,16 @@
         private System.Windows.Forms.Button student4;
         private System.Windows.Forms.Button student5;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox nameInput;
+        private System.Windows.Forms.TextBox studentNumberInput;
+        private System.Windows.Forms.TextBox courseInput;
+        private System.Windows.Forms.TextBox ageInput;
+        private System.Windows.Forms.TextBox genderInput;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
     }
 }
 

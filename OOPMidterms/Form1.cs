@@ -85,6 +85,7 @@ namespace OOPMidterms
         private void student1_Click(object sender, EventArgs e)
         {
             dropDownButton.Text = "Student 1";
+            Class1 student1 = new Class1()
         }
 
         private void student2_Click(object sender, EventArgs e)
@@ -108,6 +109,11 @@ namespace OOPMidterms
         }
 
         private void button2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
