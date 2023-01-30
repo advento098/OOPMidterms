@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,16 +15,20 @@ namespace OOPMidterms
 {
     public partial class Form1 : Form
     {
-        int studentNumber;
-        Form2 fm = new Form2();
+        public static Form1 Instance;
+
+        public int studentNumber;
+        //Form2 fm = new Form2();
 
         public Hashtable stdtable = new Hashtable();
+
         // gumawa nalang ako  dito ng hash table
         // para maccess yung items sa hashtable ganto
         // Student kahit-anong-varName = (Student)stdtable["student number"];
         public Form1()
         {
             InitializeComponent();
+            Instance = this;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -112,6 +117,7 @@ namespace OOPMidterms
             }
             else if (studentNumber > 0)
             {
+                Form2 fm = new Form2();
                 this.Hide();
                 fm.ShowDialog();
             }
@@ -125,7 +131,6 @@ namespace OOPMidterms
 }
 
     public class Student {
-
         public int StdNo { get; set; }
         public string name { get; set; }
         public string stdnumber { get; set; }

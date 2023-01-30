@@ -30,11 +30,11 @@
         {
             this.stdNoLbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.name = new System.Windows.Forms.Label();
+            this.gender = new System.Windows.Forms.Label();
+            this.age = new System.Windows.Forms.Label();
+            this.course = new System.Windows.Forms.Label();
+            this.stdNo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,70 +62,70 @@
             this.panel1.Size = new System.Drawing.Size(748, 70);
             this.panel1.TabIndex = 19;
             // 
-            // label1
+            // name
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(330, 151);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 26);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Name";
+            this.name.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.name.AutoSize = true;
+            this.name.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name.ForeColor = System.Drawing.Color.White;
+            this.name.Location = new System.Drawing.Point(330, 151);
+            this.name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(71, 26);
+            this.name.TabIndex = 24;
+            this.name.Text = "Name";
             // 
-            // label6
+            // gender
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(324, 451);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 26);
-            this.label6.TabIndex = 28;
-            this.label6.Text = "Gender";
+            this.gender.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gender.AutoSize = true;
+            this.gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gender.ForeColor = System.Drawing.Color.White;
+            this.gender.Location = new System.Drawing.Point(324, 451);
+            this.gender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.gender.Name = "gender";
+            this.gender.Size = new System.Drawing.Size(84, 26);
+            this.gender.TabIndex = 28;
+            this.gender.Text = "Gender";
             // 
-            // label5
+            // age
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(339, 374);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 26);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "Age";
+            this.age.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.age.AutoSize = true;
+            this.age.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.age.ForeColor = System.Drawing.Color.White;
+            this.age.Location = new System.Drawing.Point(339, 374);
+            this.age.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.age.Name = "age";
+            this.age.Size = new System.Drawing.Size(51, 26);
+            this.age.TabIndex = 27;
+            this.age.Text = "Age";
             // 
-            // label4
+            // course
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(324, 295);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 26);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "Course";
+            this.course.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.course.AutoSize = true;
+            this.course.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.course.ForeColor = System.Drawing.Color.White;
+            this.course.Location = new System.Drawing.Point(324, 295);
+            this.course.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.course.Name = "course";
+            this.course.Size = new System.Drawing.Size(82, 26);
+            this.course.TabIndex = 26;
+            this.course.Text = "Course";
             // 
-            // label3
+            // stdNo
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(266, 224);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(199, 26);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "Student ID Number";
+            this.stdNo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.stdNo.AutoSize = true;
+            this.stdNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stdNo.ForeColor = System.Drawing.Color.White;
+            this.stdNo.Location = new System.Drawing.Point(266, 224);
+            this.stdNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.stdNo.Name = "stdNo";
+            this.stdNo.Size = new System.Drawing.Size(199, 26);
+            this.stdNo.TabIndex = 25;
+            this.stdNo.Text = "Student ID Number";
             // 
             // Form2
             // 
@@ -133,11 +133,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(32)))), ((int)(((byte)(65)))));
             this.ClientSize = new System.Drawing.Size(748, 590);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.name);
+            this.Controls.Add(this.gender);
+            this.Controls.Add(this.age);
+            this.Controls.Add(this.course);
+            this.Controls.Add(this.stdNo);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form2";
@@ -153,10 +153,10 @@
 
         private System.Windows.Forms.Label stdNoLbl;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label name;
+        private System.Windows.Forms.Label gender;
+        private System.Windows.Forms.Label age;
+        private System.Windows.Forms.Label course;
+        private System.Windows.Forms.Label stdNo;
     }
 }
