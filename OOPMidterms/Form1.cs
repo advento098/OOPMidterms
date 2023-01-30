@@ -23,7 +23,6 @@ namespace OOPMidterms
         {
             InitializeComponent();
             Instance = this;
-
         }
         private void Form1_Load(object sender, EventArgs e){}
         public void submitbtn_Click(object sender, EventArgs e)
@@ -45,7 +44,8 @@ namespace OOPMidterms
                 Student student = new Student(studentNumber, nametb.Text, stdnumbertb.Text, coursetb.Text, agetb.Text, gendertb.Text);
                 stdtable.Add(student.StdNo, student);
                 MessageBox.Show("Student Added");
-
+                
+                stdNoLabel.Text = "Student ##";
                 nametb.Clear();
                 stdnumbertb.Clear();
                 coursetb.Clear();

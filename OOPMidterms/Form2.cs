@@ -13,7 +13,6 @@ namespace OOPMidterms
 {
     public partial class Form2 : Form
     {
-        Form1 fm = Form1.Instance;
         public static Form2 Instance;
         public Form2()
         {
