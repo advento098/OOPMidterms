@@ -17,7 +17,7 @@ namespace OOPMidterms
         int studentNumber;
         Form2 fm = new Form2();
 
-        Hashtable stdtable = new Hashtable();
+        public Hashtable stdtable = new Hashtable();
         // gumawa nalang ako  dito ng hash table
         // para maccess yung items sa hashtable ganto
         // Student kahit-anong-varName = (Student)stdtable["student number"];
@@ -45,7 +45,7 @@ namespace OOPMidterms
             else if (studentNumber > 0)
             {
                 Student student = new Student(studentNumber, nametb.Text, stdnumbertb.Text, coursetb.Text, agetb.Text, gendertb.Text);
-                stdtable.Add(student.numberOfstudent, student);
+                stdtable.Add(student.StdNo, student);
                 MessageBox.Show("Student Added");
                 // itong nasa taas lang talaga importante ehhehe
 
@@ -55,7 +55,7 @@ namespace OOPMidterms
                 {
                     Student student2 = (Student)entry.Value;
                     Console.WriteLine("Student {0}, Name: {1}, Age: {2}, Student Number: {3}, Course: {4}",
-                        student2.numberOfstudent, student2.name, student2.age, student2.stdnumber, student2.course);
+                        student2.StdNo, student2.name, student2.age, student2.stdnumber, student2.course);
                 }
                 Console.WriteLine("End of List \n");
                 // end of logs 
@@ -126,7 +126,7 @@ namespace OOPMidterms
 
     public class Student {
 
-        public int numberOfstudent { get; set; }
+        public int StdNo { get; set; }
         public string name { get; set; }
         public string stdnumber { get; set; }
         public string course{ get; set; }
@@ -134,7 +134,7 @@ namespace OOPMidterms
         public string gender { get; set; }
         public Student(int stdNo, string name, string stdnumber, string course, string age, string gender) { 
             
-            this.numberOfstudent= stdNo;
+            this.StdNo= stdNo;
             this.name = name;
             this.stdnumber = stdnumber;
             this.course = course;
