@@ -119,6 +119,7 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.Controls.Add(this.name);
             this.panel2.Controls.Add(this.stdNo);
             this.panel2.Controls.Add(this.gender);

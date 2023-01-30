@@ -15,37 +15,29 @@ namespace OOPMidterms
 {
     public partial class Form1 : Form
     {
-        public static Form1 Instance;
-
+        // Form1 fm = Form1.Instance;
+        public static Form1 Instance;       
         public int studentNumber = 0;
-        //Form2 fm = new Form2();
-
         public Hashtable stdtable = new Hashtable();
-
-        // gumawa nalang ako  dito ng hash table
-        // para maccess yung items sa hashtable ganto
-        // Student kahit-anong-varName = (Student)stdtable["student number"];
         public Form1()
         {
             InitializeComponent();
             Instance = this;
-        }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
 
+        }
+        private void Form1_Load(object sender, EventArgs e){}
         public void submitbtn_Click(object sender, EventArgs e)
         {
             if (studentNumber == 0 && String.IsNullOrEmpty(nametb.Text) && String.IsNullOrEmpty(stdnumbertb.Text)
                 && String.IsNullOrEmpty(coursetb.Text) && String.IsNullOrEmpty(agetb.Text) && String.IsNullOrEmpty(gendertb.Text))
             {
-                MessageBox.Show("Field is empty or not complete\n Please complete the registration");
+                MessageBox.Show("Field is empty or not complete\nPlease complete the registration");
             }
             else if (studentNumber == 0 && nametb.Text.Length > 2 && stdnumbertb.Text.Length > 2 && coursetb.Text.Length > 2
                 && agetb.Text.Length > 1 && gendertb.Text.Length > 1)
             {
-                MessageBox.Show("No student number is selected\n Please select 1 and register");
+                MessageBox.Show("No student number is selected\nPlease select 1 and register");
+                // fm.ShowDialog();
             }
             else if (studentNumber > 0 && nametb.Text.Length > 2 && stdnumbertb.Text.Length > 2 && coursetb.Text.Length > 2
                 && agetb.Text.Length > 1 && gendertb.Text.Length > 1)
@@ -53,18 +45,6 @@ namespace OOPMidterms
                 Student student = new Student(studentNumber, nametb.Text, stdnumbertb.Text, coursetb.Text, agetb.Text, gendertb.Text);
                 stdtable.Add(student.StdNo, student);
                 MessageBox.Show("Student Added");
-                // itong nasa taas lang talaga importante ehhehe
-
-                // mga logs lang para masundan natin yung data
-                Console.WriteLine("All Students: ");
-                foreach (DictionaryEntry entry in stdtable)
-                {
-                    Student student2 = (Student)entry.Value;
-                    Console.WriteLine("Student {0}, Name: {1}, Age: {2}, Student Number: {3}, Course: {4}",
-                        student2.StdNo, student2.name, student2.age, student2.stdnumber, student2.course);
-                }
-                Console.WriteLine("End of List \n");
-                // end of logs 
 
                 nametb.Clear();
                 stdnumbertb.Clear();
@@ -72,92 +52,82 @@ namespace OOPMidterms
                 agetb.Clear();
                 gendertb.Clear();
 
+                studentNumber = 0;
             }
             else if (stdtable.ContainsKey(studentNumber))
             {
                 MessageBox.Show("This student is already registered");
             }
 
-        }
-
-        private void selectStudent_Click(object sender, EventArgs e)
-        {
 
         }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void std1_Click(object sender, EventArgs e)
         {
             studentNumber = 1;
             stdNoLabel.Text = "Student" + " " + studentNumber.ToString();
         }
-
         private void std2_Click(object sender, EventArgs e)
         {
             studentNumber = 2;
             stdNoLabel.Text = "Student" + " " + studentNumber.ToString();
         }
-
         private void std3_Click(object sender, EventArgs e)
         {
             studentNumber = 3;
             stdNoLabel.Text = "Student" + " " + studentNumber.ToString();
         }
-
         private void std4_Click(object sender, EventArgs e)
         {
             studentNumber = 4;
             stdNoLabel.Text = "Student" + " " + studentNumber.ToString();
         }
-
         private void std5_Click(object sender, EventArgs e)
         {
             studentNumber = 5;
             stdNoLabel.Text = "Student" + " " + studentNumber.ToString();
         }
-
         private void showbtn_Click(object sender, EventArgs e)
         {
             if (studentNumber == 0) 
             {
-                MessageBox.Show("No student information to show\n Please register");
+                MessageBox.Show("No student information to show\nPlease register");
+                // quit the method
+                return;
             }
             else if (studentNumber > 0)
             {
-                Form2 fm = new Form2();
-                this.Hide();
-                fm.ShowDialog();
-            }
 
-            
+                if (stdtable[studentNumber] != null)
+                {
+                    Form2 fm = new Form2();
+                    this.Hide();
+                    fm.ShowDialog();
+                }
+                else
+                {
+                   MessageBox.Show("No student information to show\nPlease register");
+                }
+            }   
         }
-        // ang problem lang di sya nag pepersist... pag inexit yung program di na nya alam kung ano yung prevous data
-
-
     }
 }
 
-    public class Student {
-        public int StdNo { get; set; }
-        public string name { get; set; }
-        public string stdnumber { get; set; }
-        public string course{ get; set; }
-        public string age{ get; set; }
-        public string gender { get; set; }
-        public Student(int stdNo, string name, string stdnumber, string course, string age, string gender) { 
-            
-            this.StdNo= stdNo;
-            this.name = name;
-            this.stdnumber = stdnumber;
-            this.course = course;
-            this.age = age;
-            this.gender = gender;
-        }
-     }
+public class Student {
+    public int StdNo { get; set; }
+    public string name { get; set; }
+    public string stdnumber { get; set; }
+    public string course{ get; set; }
+    public string age{ get; set; }
+    public string gender { get; set; }
+    public Student(int stdNo, string name, string stdnumber, string course, string age, string gender) { 
+        this.StdNo= stdNo;
+        this.name = name;
+        this.stdnumber = stdnumber;
+        this.course = course;
+        this.age = age;
+        this.gender = gender;
+    }
+}
 
 
     
