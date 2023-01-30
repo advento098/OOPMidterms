@@ -34,12 +34,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.dropDownButton = new System.Windows.Forms.Button();
             this.student1 = new System.Windows.Forms.Button();
             this.student2 = new System.Windows.Forms.Button();
             this.student3 = new System.Windows.Forms.Button();
             this.student4 = new System.Windows.Forms.Button();
             this.student5 = new System.Windows.Forms.Button();
-            this.dropDownButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.nameInput = new System.Windows.Forms.TextBox();
             this.studentNumberInput = new System.Windows.Forms.TextBox();
@@ -51,7 +51,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -85,12 +84,6 @@
             // 
             // flowLayoutPanel2
             // 
-            this.flowLayoutPanel2.Controls.Add(this.dropDownButton);
-            this.flowLayoutPanel2.Controls.Add(this.student1);
-            this.flowLayoutPanel2.Controls.Add(this.student2);
-            this.flowLayoutPanel2.Controls.Add(this.student3);
-            this.flowLayoutPanel2.Controls.Add(this.student4);
-            this.flowLayoutPanel2.Controls.Add(this.student5);
             this.flowLayoutPanel2.Location = new System.Drawing.Point(343, 130);
             this.flowLayoutPanel2.MaximumSize = new System.Drawing.Size(291, 268);
             this.flowLayoutPanel2.MinimumSize = new System.Drawing.Size(291, 69);
@@ -99,12 +92,29 @@
             this.flowLayoutPanel2.TabIndex = 10;
             this.flowLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel2_Paint);
             // 
+            // dropDownButton
+            // 
+            this.dropDownButton.BackColor = System.Drawing.SystemColors.Control;
+            this.dropDownButton.FlatAppearance.BorderSize = 0;
+            this.dropDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dropDownButton.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dropDownButton.Image = global::OOPMidterms.Properties.Resources.dArrow;
+            this.dropDownButton.Location = new System.Drawing.Point(691, 97);
+            this.dropDownButton.Name = "dropDownButton";
+            this.dropDownButton.Size = new System.Drawing.Size(285, 64);
+            this.dropDownButton.TabIndex = 0;
+            this.dropDownButton.TabStop = false;
+            this.dropDownButton.Text = "SELECT STUDENT NUMBER";
+            this.dropDownButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.dropDownButton.UseVisualStyleBackColor = false;
+            this.dropDownButton.Click += new System.EventHandler(this.button8_Click);
+            // 
             // student1
             // 
             this.student1.BackColor = System.Drawing.SystemColors.Control;
             this.student1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.student1.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.student1.Location = new System.Drawing.Point(3, 73);
+            this.student1.Location = new System.Drawing.Point(640, 298);
             this.student1.Name = "student1";
             this.student1.Size = new System.Drawing.Size(285, 32);
             this.student1.TabIndex = 1;
@@ -117,7 +127,7 @@
             this.student2.BackColor = System.Drawing.SystemColors.Control;
             this.student2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.student2.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.student2.Location = new System.Drawing.Point(3, 111);
+            this.student2.Location = new System.Drawing.Point(121, 82);
             this.student2.Name = "student2";
             this.student2.Size = new System.Drawing.Size(285, 32);
             this.student2.TabIndex = 2;
@@ -130,7 +140,7 @@
             this.student3.BackColor = System.Drawing.SystemColors.Control;
             this.student3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.student3.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.student3.Location = new System.Drawing.Point(3, 149);
+            this.student3.Location = new System.Drawing.Point(121, 158);
             this.student3.Name = "student3";
             this.student3.Size = new System.Drawing.Size(285, 32);
             this.student3.TabIndex = 3;
@@ -143,7 +153,7 @@
             this.student4.BackColor = System.Drawing.SystemColors.Control;
             this.student4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.student4.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.student4.Location = new System.Drawing.Point(3, 187);
+            this.student4.Location = new System.Drawing.Point(100, 216);
             this.student4.Name = "student4";
             this.student4.Size = new System.Drawing.Size(285, 32);
             this.student4.TabIndex = 4;
@@ -156,30 +166,13 @@
             this.student5.BackColor = System.Drawing.SystemColors.Control;
             this.student5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.student5.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.student5.Location = new System.Drawing.Point(3, 225);
+            this.student5.Location = new System.Drawing.Point(467, 82);
             this.student5.Name = "student5";
             this.student5.Size = new System.Drawing.Size(285, 32);
             this.student5.TabIndex = 5;
             this.student5.Text = "Student 5";
             this.student5.UseVisualStyleBackColor = false;
             this.student5.Click += new System.EventHandler(this.student5_Click);
-            // 
-            // dropDownButton
-            // 
-            this.dropDownButton.BackColor = System.Drawing.SystemColors.Control;
-            this.dropDownButton.FlatAppearance.BorderSize = 0;
-            this.dropDownButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dropDownButton.Font = new System.Drawing.Font("Calibri", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dropDownButton.Image = global::OOPMidterms.Properties.Resources.dArrow;
-            this.dropDownButton.Location = new System.Drawing.Point(3, 3);
-            this.dropDownButton.Name = "dropDownButton";
-            this.dropDownButton.Size = new System.Drawing.Size(285, 64);
-            this.dropDownButton.TabIndex = 0;
-            this.dropDownButton.TabStop = false;
-            this.dropDownButton.Text = "SELECT STUDENT NUMBER";
-            this.dropDownButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.dropDownButton.UseVisualStyleBackColor = false;
-            this.dropDownButton.Click += new System.EventHandler(this.button8_Click);
             // 
             // button2
             // 
@@ -195,7 +188,7 @@
             // nameInput
             // 
             this.nameInput.Font = new System.Drawing.Font("Calibri", 12F);
-            this.nameInput.Location = new System.Drawing.Point(343, 251);
+            this.nameInput.Location = new System.Drawing.Point(49, 316);
             this.nameInput.Name = "nameInput";
             this.nameInput.Size = new System.Drawing.Size(291, 32);
             this.nameInput.TabIndex = 12;
@@ -203,7 +196,7 @@
             // studentNumberInput
             // 
             this.studentNumberInput.Font = new System.Drawing.Font("Calibri", 12F);
-            this.studentNumberInput.Location = new System.Drawing.Point(343, 316);
+            this.studentNumberInput.Location = new System.Drawing.Point(634, 481);
             this.studentNumberInput.Name = "studentNumberInput";
             this.studentNumberInput.Size = new System.Drawing.Size(291, 32);
             this.studentNumberInput.TabIndex = 13;
@@ -211,7 +204,7 @@
             // courseInput
             // 
             this.courseInput.Font = new System.Drawing.Font("Calibri", 12F);
-            this.courseInput.Location = new System.Drawing.Point(343, 377);
+            this.courseInput.Location = new System.Drawing.Point(33, 455);
             this.courseInput.Name = "courseInput";
             this.courseInput.Size = new System.Drawing.Size(291, 32);
             this.courseInput.TabIndex = 14;
@@ -219,7 +212,7 @@
             // ageInput
             // 
             this.ageInput.Font = new System.Drawing.Font("Calibri", 12F);
-            this.ageInput.Location = new System.Drawing.Point(343, 443);
+            this.ageInput.Location = new System.Drawing.Point(712, 575);
             this.ageInput.Name = "ageInput";
             this.ageInput.Size = new System.Drawing.Size(148, 32);
             this.ageInput.TabIndex = 15;
@@ -227,7 +220,7 @@
             // genderInput
             // 
             this.genderInput.Font = new System.Drawing.Font("Calibri", 12F);
-            this.genderInput.Location = new System.Drawing.Point(498, 443);
+            this.genderInput.Location = new System.Drawing.Point(173, 544);
             this.genderInput.Name = "genderInput";
             this.genderInput.Size = new System.Drawing.Size(136, 32);
             this.genderInput.TabIndex = 16;
@@ -290,6 +283,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(997, 726);
+            this.Controls.Add(this.student5);
+            this.Controls.Add(this.student3);
+            this.Controls.Add(this.student1);
+            this.Controls.Add(this.student4);
+            this.Controls.Add(this.dropDownButton);
+            this.Controls.Add(this.student2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -309,7 +308,6 @@
             this.Name = "Form1";
             this.Text = "--";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.flowLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
