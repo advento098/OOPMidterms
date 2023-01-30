@@ -14,7 +14,9 @@ namespace OOPMidterms
 {
     public partial class Form1 : Form
     {
-        int studentNumber;
+        public static Form1 Instance;
+
+        public int studentNumber;
         Form2 fm = new Form2();
 
         public Hashtable stdtable = new Hashtable();
@@ -24,6 +26,7 @@ namespace OOPMidterms
         public Form1()
         {
             InitializeComponent();
+            Instance = this;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -48,7 +51,7 @@ namespace OOPMidterms
             {   
                 if(stdtable.ContainsKey(studentNumber.ToString()))
                 {
-                    MessageBox.Show("Student already registered\n Please select another student");
+                    MessageBox.Show("Student already registered\nPlease select another student");
                 }
                 else
                 {
@@ -66,22 +69,15 @@ namespace OOPMidterms
             }
             else
             {
-                MessageBox.Show("Field is empty or not complete\n Please complete the registration");
+                MessageBox.Show("Field is empty or not complete\nPlease complete the registration");
             }
         }
 
 
         private void std1_Click(object sender, EventArgs e)
         {
-            if(studentNumber == 0)
-            {
                 studentNumber = 1;
                 stdNoLabel.Text = "Student" + " " + studentNumber.ToString();
-            }
-            else if (studentNumber > 0)
-            {
-                MessageBox.Show("Student already registered\n Please select another student");
-            }
         }
 
         private void std2_Click(object sender, EventArgs e)
@@ -112,7 +108,7 @@ namespace OOPMidterms
         {
             if (studentNumber == 0) 
             {
-                MessageBox.Show("No student information to show\n Please register");
+                MessageBox.Show("No student information to show\nPlease register");
             }
             else if (studentNumber > 0)
             {
