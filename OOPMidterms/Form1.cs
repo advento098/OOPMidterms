@@ -17,7 +17,7 @@ namespace OOPMidterms
     {
         public static Form1 Instance;
 
-        public int studentNumber;
+        public int studentNumber = 0;
         //Form2 fm = new Form2();
 
         public Hashtable stdtable = new Hashtable();
@@ -47,7 +47,8 @@ namespace OOPMidterms
             {
                 MessageBox.Show("No student number is selected\n Please select 1 and register");
             }
-            else if (studentNumber > 0)
+            else if (studentNumber > 0 && nametb.Text.Length > 2 && stdnumbertb.Text.Length > 2 && coursetb.Text.Length > 2
+                && agetb.Text.Length > 1 && gendertb.Text.Length > 1)
             {
                 Student student = new Student(studentNumber, nametb.Text, stdnumbertb.Text, coursetb.Text, agetb.Text, gendertb.Text);
                 stdtable.Add(student.StdNo, student);
@@ -64,8 +65,18 @@ namespace OOPMidterms
                 }
                 Console.WriteLine("End of List \n");
                 // end of logs 
-            }
 
+                nametb.Clear();
+                stdnumbertb.Clear();
+                coursetb.Clear();
+                agetb.Clear();
+                gendertb.Clear();
+
+            }
+            else if (stdtable.ContainsKey(studentNumber))
+            {
+                MessageBox.Show("This student is already registered");
+            }
 
         }
 

@@ -29,7 +29,26 @@ namespace OOPMidterms
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            /*switch (Form1.Instance.studentNumber)
+
+           
+            
+            Student info = (Student)Form1.Instance.stdtable[Form1.Instance.studentNumber];
+            stdNoLbl.Text = "Student" + " " + info.StdNo;
+            name.Text = info.name;
+            stdNo.Text = info.stdnumber;
+            course.Text = info.course;
+            age.Text = info.age;
+            gender.Text = info.gender;
+
+
+        }
+
+    }
+}
+
+
+
+/*switch (Form1.Instance.studentNumber)
             {
                 case 1:
                     stdNoLbl.Text = "Student" + " " + item.StdNo;
@@ -72,7 +91,3 @@ namespace OOPMidterms
             }
 
         }*/
-        }
-
-    }
-}

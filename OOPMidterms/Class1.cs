@@ -10,6 +10,6 @@ namespace OOPMidterms
     public class Class1
     {
 
-        public Hashtable stdtable = new Hashtable();
+
     }
 }
