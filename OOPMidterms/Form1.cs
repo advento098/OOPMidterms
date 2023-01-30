@@ -37,47 +37,51 @@ namespace OOPMidterms
             {
                 MessageBox.Show("Field is empty or not complete\n Please complete the registration");
             }
+            
             else if (studentNumber == 0 && nametb.Text.Length > 2 && stdnumbertb.Text.Length > 2 && coursetb.Text.Length > 2
                 && agetb.Text.Length > 1 && gendertb.Text.Length > 1)
             {
-                MessageBox.Show("No student number is selected\n Please select 1 and register");
+                MessageBox.Show("No student number is selected\n Please select one and register");
             }
-            else if (studentNumber > 0)
-            {
-                Student student = new Student(studentNumber, nametb.Text, stdnumbertb.Text, coursetb.Text, agetb.Text, gendertb.Text);
-                stdtable.Add(student.StdNo, student);
-                MessageBox.Show("Student Added");
-                // itong nasa taas lang talaga importante ehhehe
-
-                // mga logs lang para masundan natin yung data
-                Console.WriteLine("All Students: ");
-                foreach (DictionaryEntry entry in stdtable)
+            
+            else if (studentNumber > 0 )
+            {   
+                if(stdtable.ContainsKey(studentNumber.ToString()))
                 {
-                    Student student2 = (Student)entry.Value;
-                    Console.WriteLine("Student {0}, Name: {1}, Age: {2}, Student Number: {3}, Course: {4}",
-                        student2.StdNo, student2.name, student2.age, student2.stdnumber, student2.course);
+                    MessageBox.Show("Student already registered\n Please select another student");
                 }
-                Console.WriteLine("End of List \n");
-                // end of logs 
+                else
+                {
+                    Student std = new Student(studentNumber, nametb.Text, stdnumbertb.Text, coursetb.Text, agetb.Text, gendertb.Text);
+                    stdtable.Add(studentNumber.ToString(), std);
+                    MessageBox.Show("Student" + " " + studentNumber.ToString() + " " + "is registered");
+                    studentNumber = 0;
+                    stdNoLabel.Text = "Student ##";
+                    nametb.Text = "";
+                    stdnumbertb.Text = "";
+                    coursetb.Text = "";
+                    agetb.Text = "";
+                    gendertb.Text = "";
+                }
             }
-
-
+            else
+            {
+                MessageBox.Show("Field is empty or not complete\n Please complete the registration");
+            }
         }
 
-        private void selectStudent_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void std1_Click(object sender, EventArgs e)
         {
-            studentNumber = 1;
-            stdNoLabel.Text = "Student" + " " + studentNumber.ToString();
+            if(studentNumber == 0)
+            {
+                studentNumber = 1;
+                stdNoLabel.Text = "Student" + " " + studentNumber.ToString();
+            }
+            else if (studentNumber > 0)
+            {
+                MessageBox.Show("Student already registered\n Please select another student");
+            }
         }
 
         private void std2_Click(object sender, EventArgs e)
@@ -114,13 +118,8 @@ namespace OOPMidterms
             {
                 this.Hide();
                 fm.ShowDialog();
-            }
-
-            
+            }  
         }
-        // ang problem lang di sya nag pepersist... pag inexit yung program di na nya alam kung ano yung prevous data
-
-
     }
 }
 

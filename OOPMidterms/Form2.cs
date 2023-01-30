@@ -12,11 +12,11 @@ namespace OOPMidterms
 {
     public partial class Form2 : Form
     {
-        Form1 fm = new Form1(); 
+        // Form1 fm = new Form1(); 
 
-        Student readStdInfo = (Student)Form1.stdtable.entry.Value;
-        Console.WriteLine("Student {0}, Name: {1}, Age: {2}, Student Number: {3}, Course: {4}",
-                        student2.numberOfstudent, student2.name, student2.age, student2.stdnumber, student2.course);
+        // Student readStdInfo = (Student)Form1.stdtable.entry.Value;
+        // Console.WriteLine("Student {0}, Name: {1}, Age: {2}, Student Number: {3}, Course: {4}",
+        //                 student2.numberOfstudent, student2.name, student2.age, student2.stdnumber, student2.course);
         public Form2()
         {
             InitializeComponent();
