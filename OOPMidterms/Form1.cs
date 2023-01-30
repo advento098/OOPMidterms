@@ -88,7 +88,7 @@ namespace OOPMidterms
         }
         private void showbtn_Click(object sender, EventArgs e)
         {
-            if (studentNumber == 0) 
+            if (studentNumber == 0 || !stdtable.ContainsKey(studentNumber)) 
             {
                 MessageBox.Show("No student information to show\nPlease register");
                 // quit the method
